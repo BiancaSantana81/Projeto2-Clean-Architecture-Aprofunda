@@ -2,9 +2,9 @@ import { Request, Response } from 'express';
 import { createText, listTexts } from '../services/textService';
 
 export function createTextController(req: Request, res: Response): void {
-    const {title, content, autor } = req.body;
+    const {title, content, status, autor } = req.body;
 
-    if (!title || !content || !autor) {
+    if (!title || !content || !status || !autor) {
         res.status(400).json({ error: 'Campos obrigatórios ausentes!' });
         return;
     }
