@@ -15,6 +15,4 @@ export function createText(title: string, content: string, author: string): Text
     return newText;
 }
 
-export function listTexts(): Text[] {
-    return texts;
-}
+export function listTexts(): Text[] { return texts; }
